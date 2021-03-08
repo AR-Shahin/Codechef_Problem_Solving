@@ -1,0 +1,219 @@
+ATM Problem Code: HS08TEST
+#include<stdio.h>
+int main()
+{
+    int X;
+    float Y;
+    scanf("%d%f",&X,&Y);
+    if(X%5 != 0){
+        printf("%.2f\n",Y);
+    }else if(X + .5>Y){
+          printf("%.2f\n",Y);
+    }else{
+          printf("%.2f\n",(Y-X) - .5);
+    }
+    return 0;
+}
+
+Enormous Input Test Problem Code: INTEST
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,k,t,count =0;
+    cin>>n>>k;
+    for (int i=1;i<=n;i++){
+        cin>>t;
+        if(t%k == 0){
+            count ++;
+        }
+    }
+    cout<<count<<endl;
+    return 0;
+}
+
+Add Two Numbers Problem Code: FLOW001
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T,A,B;
+    cin>>T;
+    while(T--){
+        cin>>A>>B;
+        cout<<A+B<<endl;
+    }
+    return 0;
+}
+Sum of Digits
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T,N;
+    cin>>T;
+    while(T--){
+        int sum = 0;
+        cin>>N;
+        while(N!=0){
+            int rem = N % 10;
+            sum += rem;
+            N = N /10;
+        }
+    cout<<sum<<endl;
+    }
+    return 0;
+}
+
+Find Remainder
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T,A,B;
+    cin>>T;
+    while(T--){
+    cin>>A>>B;
+    cout<<A%B<<endl;
+    }
+    return 0;
+}
+small factorials problem code fctrl2 
+#include<stdio.h>
+
+int main()
+{
+    int t,n,a[200],i,j,k,l,m;
+    scanf("%d",&t);
+    while(t--)
+    {
+	    scanf("%d",&n);
+        m=1;
+        a[0]=1;
+        for(j=2;j<=n;j++)
+        {
+            l=0;
+            for(k=0;k<m;k++)
+            {
+                a[k]=a[k]*j+l;
+                l=a[k]/10;
+                a[k]=a[k]%10;
+            }
+            while(l)
+            {
+	            a[k]=l%10;
+                k++;
+                m++;
+                l=l/10;
+            }
+        }
+        for(i=m-1;i>=0;i--)
+            printf("%d",a[i]);
+
+        printf("\n");
+    }
+    return 0;
+}
+Turbo Sort Problem Code: TSORT
+
+
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    int a, arr[1000001]={0}, b;
+    scanf("%d", &a);
+    while(a--) {
+        scanf("%d", &b);
+        arr[b]++;
+    }
+    for(int i=0; i<1000001; i++) {
+        while(arr[i]>0) {
+            printf("%d\n", i);
+            arr[i]--;
+        }
+    }
+    return 0;
+}
+First and Last Digit Problem Code: FLOW004Solved
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int T,N,first,last,sum;
+    cin >> T;
+    while(T--){
+            cin>>N;
+    first = N;
+	last=N % 10;
+	for(first=N;first>=10;first=first/10);
+	cout<<first+last<<endl;
+    }
+
+}
+Lucky Four Problem Code: LUCKFOUR
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int T,num;
+    cin >> T;
+    while(T--){
+    cin>>num;
+   int count =0;
+    while(num !=0){
+        int rem = num %10;
+        if(rem == 4){
+            count ++;
+        }
+        num = num/10;
+    }
+    cout<<count<<endl;
+    }
+
+}
+
+Reverse The Number Problem Code: FLOW007
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   int T,N;
+    cin >> T;
+    while(T--){
+    cin>>N;
+   int sum = 0;
+   while(N!=0){
+    int rem = N % 10;
+    sum = (sum * 10) + rem;
+    N = N /10;
+   }
+   cout<<sum<<endl;
+    }
+
+    }
+Finding Square Roots Problem Code: FSQRTSolved
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+   int T,N;
+    cin >> T;
+    while(T--){
+    cin>>N;
+   cout<<floor(sqrt(N))<<endl;
+   }
+
+    }
+
+
+
+
+
