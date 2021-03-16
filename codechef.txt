@@ -213,7 +213,60 @@ int main()
 
     }
 
+Second Largest Problem Code: FLOW017
+#include <iostream>
+using namespace std;
 
+int main()
+{
+   int T,A,B,C;
+    cin >> T;
+    while(T--){
+    cin>>A>>B>>C;
+       if((A>B && A<C ) ||(A<B && A>C ) ){
+        cout<<A<<endl;
+       }
+       else if((A>B && B>C) || (A<B && B<C)) {
+        cout<<B<<endl;
+       }else if((C>A && C<B) || (C<A && C>B)){
+           cout<<C<<endl;
+       }
+   }
+
+}
+
+
+Chef And Operators
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T,A,B;
+    cin>>T;
+    while(T--){
+         cin>>A>>B;
+         if(A>B){
+            cout<<">"<<endl;
+         }else if(A<B){
+             cout<<"<"<<endl;
+         }else{
+             cout<<"="<<endl;
+         }
+    }
+}
+Decrement OR Increment
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N;
+   cin>>N;
+   if(N%4==0){
+    cout<<++N<<endl;
+   }else{
+       cout<<--N<<endl;
+   }
+}
 
 
 
